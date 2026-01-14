@@ -17,6 +17,19 @@ interface User {
   email: string;
 }
 
+
+function TestComponent() {
+return (
+    <button
+      onClick={() => {
+        throw new Error('This is your first error!');
+      }}
+    >
+      Break the world
+    </button>
+  );
+}
+
 function App() {
   const [blogs, setBlogs] = useState<Blog[]>([]);
   const [users, setUsers] = useState<User[]>([]);
@@ -169,6 +182,13 @@ function App() {
         onChange={(e) => setNewUser({ ...newUser, password: e.target.value })}
       />
       <button onClick={createUser}>Créer l’utilisateur</button>
+
+      <div>
+        <h2>
+          error bton test
+        </h2>
+        <TestComponent />
+      </div>
     </div>
   );
 }
