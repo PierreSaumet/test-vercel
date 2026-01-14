@@ -101,7 +101,7 @@ function App() {
 
   return (
     <div style={{ padding: '20px' }}>
-      <h1>Blogs</h1>
+      <h1 style={{ color: 'red' }}>Blogs</h1>
 
       <ul>
         {blogs.map((blog) => (
