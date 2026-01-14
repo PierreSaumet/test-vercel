@@ -90,7 +90,7 @@ function App() {
   ======================= */
   const createUser = async () => {
     await apiFetch({
-      path: '/users/register/',
+      path: '/users/',
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(newUser),
